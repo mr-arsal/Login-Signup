@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Internal CSS Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Login Page -->
+
+    <div class="container login-page">
+
+        <form class="bg-white rounded p-3" onclick="validateForm()">
+            <h3 class="text-center mt-4 mb-4">Welcome to Login Page</h3>
+            <div class="mb-3">
+                <label for="email" class="form-label fs-6">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                    placeholder="Enter your email address" required>
+                <small id="emailvalid" class="form-text fs-6">
+                    Your email must be complete characters and should not be incorrect
+                </small>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label fs-6">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1"
+                    placeholder="Enter your password">
+            </div>
+            <div class="login-btns">
+                <input class="btn btn-primary ps-3 pe-3" type="submit" value="Log in"></input>
+                <a href="./signup.html" class="btn btn-primary ps-3 pe-3" type="submit">Sign in</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

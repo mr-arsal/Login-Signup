@@ -21,17 +21,17 @@
     <div class="container login-page">
         <form class="bg-white rounded p-3">
             <div class="mb-3">
-                <label for="email" class="form-label fs-6">First Name</label>
+                <label for="first-name" class="form-label fs-6">First Name</label>
                 <input class="form-control" type="text" placeholder="Enter your first name" id="first-name">
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label fs-6">Last Name</label>
+                <label for="last-name" class="form-label fs-6">Last Name</label>
                 <input class="form-control" type="text" placeholder="Enter your last name" id="last-name">
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label fs-6">Email address</label>
+                <label for="signup-email" class="form-label fs-6">Email address</label>
                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" id="signup-email"
                     placeholder="Enter your email address">
                 <small id="emailvalid" class="form-text fs-6">
@@ -40,28 +40,35 @@
             </div>
 
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label fs-6">Password</label>
+                <label for="password" class="form-label fs-6">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" id="password"
                     placeholder="Enter your password">
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label fs-6">Address</label>
+                <label for="address" class="form-label fs-6">Address</label>
                 <input class="form-control" type="text" placeholder="Enter your address" id="address">
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label fs-6">Phone Number</label>
+                <label for="phone" class="form-label fs-6">Phone Number</label>
                 <input class="form-control" type="tel" id="phone" name="phone" placeholder="Enter your phone number"
                     id="phone-num">
             </div>
 
+            <div class="mb-3">
+                <label for="image" class="form-label fs-6">Select an image:</label>
+                <input class="form-control" type="file" id="image" name="image" accept="image/*">
+            </div>
+
             <!-- Button -->
 
-            <button id="submit-button" class="btn btn-primary ps-3 pe-3" type="submit">Submit</button>
+            <button id="submit-button" class="btn btn-primary ps-3 pe-3" type="submit" onclick="store()">Submit</button>
 
         </form>
     </div>
+
+    <script src="/app.js"></script>
 </body>
 
 </html>

@@ -30,3 +30,11 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* Eyeicon */
+
+#togglePassword {
+    cursor: pointer;
+}
+
+/* --------------- */

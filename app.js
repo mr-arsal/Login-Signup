@@ -1,32 +1,59 @@
-// Sign Up 
+// Hide And Show Password
+const passwordInput = document.getElementById('passwordInput');
+const toggleButton = document.getElementById('togglePassword');
 
- let firstName = document.getElementById('first-name');
- let lastName = document.getElementById('last-name');
- let signupEmail = document.getElementById('signup-email');
- let password = document.getElementById('password');
- let address = document.getElementById('address');
- let phoneNum = document.getElementById('phone-num');
+toggleButton.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});
 
- // Load data from Local Storage when the page loads
- window.onload = function() {
-     firstName.value = localStorage.getItem('first-name') || '';
-     lastName.value = localStorage.getItem('last-name') || '';
-     signupEmail.value = localStorage.getItem('signup-email') || '';
-     password.value = localStorage.getItem('password') || '';
-     address.value = localStorage.getItem('address') || '';
-     phoneNum.value = localStorage.getItem('phone-num') || '';
- };
+// ----------------------------------------------------------
 
- // Store the values in Local Storage
- document.getElementById('submit-button').addEventListener('click', function(e) {
+// Email Validation
+function validateEmail() {
+    const emailInput = document.getElementById('email').value;
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    if (emailPattern.test(emailInput)) {
+        alert('Valid email address');
+    } else {
+        alert('Invalid email address');
+    }
+}
+
+// ----------------------------------------------------------
+
+// Sign Up Page
+function store(e) {
+
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const signupEmail = document.getElementById('signup-email').value;
+    const passwords = document.getElementById('password').value;
+    const address = document.getElementById('address').value;
+    const phoneNum = document.getElementById('phone-num').value;
+
+    const formData = {
+        firstName,
+        lastName,
+        signupEmail,
+        passwords,
+        address,
+        phoneNum
+    };
+    localStorage.setItem('formData', JSON.stringify(formData));
+    alert('Form data has been saved to local storage.');
+
     e.preventDefault()
-     localStorage.setItem('first-name', firstName.value);
-     localStorage.setItem('last-name', lastName.value);
-     localStorage.setItem('signup-email', signupEmail.value);
-     localStorage.setItem('password', password.value);
-     localStorage.setItem('address', address.value);
-     localStorage.setItem('phone-num', phoneNum.value);
-     alert('Data saved to Local Storage.');
- });
+};
+
+
+// ---------------------------------------------------------
+
+
+
 
 

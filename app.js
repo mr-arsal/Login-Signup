@@ -26,7 +26,7 @@ function validateEmail() {
 
 // ----------------------------------------------------------
 
-// Sign Up Page
+// Data stored to local storage
 function store() {
     document.getElementById("form-sign-up").addEventListener("submit", (e) => {
         e.preventDefault()
